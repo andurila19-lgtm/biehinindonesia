@@ -34,6 +34,21 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #c5a880;
   }
+
+  /* Prevent mobile date input horizontal overflow */
+  input[type="date"] {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    -webkit-appearance: none;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(0.8) sepia(100%) saturate(300%) hue-rotate(5deg);
+    opacity: 0.85;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 @layer utilities {

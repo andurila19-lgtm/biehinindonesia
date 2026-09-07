@@ -41,7 +41,7 @@ export default function BookingCtaSection() {
           </p>
 
           {/* Form Card */}
-          <div className="mt-6 sm:mt-8 p-4 sm:p-10 bg-[#061d24]/95 border border-[#dfb76c]/30 shadow-2xl text-left">
+          <div className="mt-6 sm:mt-8 p-4 sm:p-10 bg-[#061d24]/95 border border-[#dfb76c]/30 shadow-2xl text-left max-w-full overflow-hidden">
             {submitted ? (
               <div className="text-center py-10 space-y-4">
                 <CheckCircle2 className="w-12 h-12 text-[#dfb76c] mx-auto" />
@@ -61,10 +61,10 @@ export default function BookingCtaSection() {
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6 max-w-full">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 w-full min-w-0">
                   {/* 1. Full Name */}
-                  <div className="space-y-1.5">
+                  <div className="space-y-1.5 w-full min-w-0">
                     <label className="font-sans text-[10px] text-[#dfb76c] tracking-widest uppercase font-semibold block">
                       {dict.appointment.nameLabel}
                     </label>
@@ -74,12 +74,12 @@ export default function BookingCtaSection() {
                       placeholder={dict.appointment.namePlaceholder}
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full bg-[#092831] border border-[#dfb76c]/30 px-4 py-3 text-sm text-[#fbf9f4] placeholder-[#e0e3e4]/30 focus:border-[#dfb76c] focus:outline-none transition-colors"
+                      className="w-full min-w-0 max-w-full box-border bg-[#092831] border border-[#dfb76c]/30 px-3.5 py-3 text-sm text-[#fbf9f4] placeholder-[#e0e3e4]/30 focus:border-[#dfb76c] focus:outline-none transition-colors"
                     />
                   </div>
 
                   {/* 2. WhatsApp */}
-                  <div className="space-y-1.5">
+                  <div className="space-y-1.5 w-full min-w-0">
                     <label className="font-sans text-[10px] text-[#dfb76c] tracking-widest uppercase font-semibold block">
                       {dict.appointment.phoneLabel}
                     </label>
@@ -89,21 +89,21 @@ export default function BookingCtaSection() {
                       placeholder={dict.appointment.phonePlaceholder}
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full bg-[#092831] border border-[#dfb76c]/30 px-4 py-3 text-sm text-[#fbf9f4] placeholder-[#e0e3e4]/30 focus:border-[#dfb76c] focus:outline-none transition-colors"
+                      className="w-full min-w-0 max-w-full box-border bg-[#092831] border border-[#dfb76c]/30 px-3.5 py-3 text-sm text-[#fbf9f4] placeholder-[#e0e3e4]/30 focus:border-[#dfb76c] focus:outline-none transition-colors"
                     />
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 w-full min-w-0">
                   {/* 3. Showroom */}
-                  <div className="space-y-1.5">
+                  <div className="space-y-1.5 w-full min-w-0">
                     <label className="font-sans text-[10px] text-[#dfb76c] tracking-widest uppercase font-semibold block">
                       {dict.appointment.cityLabel}
                     </label>
                     <select
                       value={formData.salon}
                       onChange={(e) => setFormData({ ...formData, salon: e.target.value })}
-                      className="w-full bg-[#092831] border border-[#dfb76c]/30 px-4 py-3 text-sm text-[#fbf9f4] focus:border-[#dfb76c] focus:outline-none transition-colors"
+                      className="w-full min-w-0 max-w-full box-border bg-[#092831] border border-[#dfb76c]/30 px-3 py-3 text-xs sm:text-sm text-[#fbf9f4] focus:border-[#dfb76c] focus:outline-none transition-colors truncate"
                     >
                       <option value="Surabaya Pusat (Pahlawan)">Surabaya Pusat (Jl. Pahlawan No. 79)</option>
                       <option value="Surabaya Timur (Manyar Kartika)">Surabaya Timur (Manyar Kartika No. 69B)</option>
@@ -115,14 +115,14 @@ export default function BookingCtaSection() {
                   </div>
 
                   {/* 4. Occasion */}
-                  <div className="space-y-1.5">
+                  <div className="space-y-1.5 w-full min-w-0">
                     <label className="font-sans text-[10px] text-[#dfb76c] tracking-widest uppercase font-semibold block">
                       Occasion
                     </label>
                     <select
                       value={formData.occasion}
                       onChange={(e) => setFormData({ ...formData, occasion: e.target.value })}
-                      className="w-full bg-[#092831] border border-[#dfb76c]/30 px-4 py-3 text-sm text-[#fbf9f4] focus:border-[#dfb76c] focus:outline-none transition-colors"
+                      className="w-full min-w-0 max-w-full box-border bg-[#092831] border border-[#dfb76c]/30 px-3 py-3 text-xs sm:text-sm text-[#fbf9f4] focus:border-[#dfb76c] focus:outline-none transition-colors truncate"
                     >
                       <option value="Wedding & Groom Suit">Wedding &amp; Groom Suit</option>
                       <option value="Business & Executive Suit">Business &amp; Executive Suit</option>
@@ -132,18 +132,20 @@ export default function BookingCtaSection() {
                     </select>
                   </div>
 
-                  {/* 5. Preferred Date */}
-                  <div className="space-y-1.5">
+                  {/* 5. Preferred Date (Strictly contained for mobile) */}
+                  <div className="space-y-1.5 w-full min-w-0">
                     <label className="font-sans text-[10px] text-[#dfb76c] tracking-widest uppercase font-semibold block">
                       {dict.appointment.dateLabel}
                     </label>
-                    <input
-                      type="date"
-                      required
-                      value={formData.date}
-                      onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                      className="w-full bg-[#092831] border border-[#dfb76c]/30 px-4 py-3 text-sm text-[#fbf9f4] focus:border-[#dfb76c] focus:outline-none transition-colors"
-                    />
+                    <div className="w-full min-w-0 overflow-hidden">
+                      <input
+                        type="date"
+                        required
+                        value={formData.date}
+                        onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+                        className="w-full min-w-0 max-w-full box-border bg-[#092831] border border-[#dfb76c]/30 px-3 py-3 text-sm text-[#fbf9f4] focus:border-[#dfb76c] focus:outline-none transition-colors [color-scheme:dark] block"
+                      />
+                    </div>
                   </div>
                 </div>
 
