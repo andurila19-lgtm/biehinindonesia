@@ -1,0 +1,43 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+.vscode/
+
+# temp design artifacts
+/bie_hin_tailor_bespoke_sartorial_excellence_since_1930/
+/cinematic_luxury_menswear_campaign_editorial_photograph._an_elegant_gentleman/
+/close_up_artisanal_tailoring_photography_in_a_vintage_luxury_atelier._master/
+/heritage_bespoke_sartorial/
+/image.png/
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
