@@ -15,6 +15,7 @@ export default function Navbar() {
   const { locale, setLocale, dict } = useLanguage();
 
   const navLinks = [
+    { label: dict.nav.home, href: "/" },
     { label: dict.nav.story, href: "/our-story" },
     { label: dict.nav.services, href: "/services" },
     { label: dict.nav.collection, href: "/collection" },

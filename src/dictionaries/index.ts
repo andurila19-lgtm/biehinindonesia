@@ -1,5 +1,6 @@
 export type Dictionary = {
   nav: {
+    home: string;
     story: string;
     services: string;
     collection: string;
@@ -113,6 +114,7 @@ export type Dictionary = {
 
 export const id: Dictionary = {
   nav: {
+    home: "BERANDA",
     story: "TENTANG KAMI",
     services: "LAYANAN",
     collection: "KOLEKSI",
@@ -261,6 +263,7 @@ export const id: Dictionary = {
 
 export const en: Dictionary = {
   nav: {
+    home: "HOME",
     story: "OUR STORY",
     services: "SERVICES",
     collection: "COLLECTION",
